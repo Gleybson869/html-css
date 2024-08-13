@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/* Geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:#fcfdff
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Faixa Superior */
+.top-strip {
+    background: linear-gradient();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.top-strip .left-side,
+.top-strip .center,
+.top-strip .right-side {
+    display: flex;
+    align-items: center;
+}
+
+.top-strip .left-side a {
+    margin-right: 15px;
+}
+
+.top-strip .left-side a img {
+    width: 20px;
+    height: 20px;
+}
+
+.top-strip .center {
+    flex-grow: 1;
+    justify-content: center;
+    font-size: 14px;
+    color: #000;
+}
+
+.top-strip .right-side a {
+    margin-left: 15px;
+}
+
+.top-strip .right-side a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-image: linear-gradient(#fbf7f0d5) ;
+    padding: 10px 20px;
+}
+
+header .bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 150px;
+    width: auto;
+}
+
+header .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .main-nav ul li {
+    margin: 0 15px;
+}
+
+header .main-nav ul li a {
+    color: #05053e;
+    font-size: 20px;
+}
+
+.main-nav ul li a:hover {
+    color: #f99e01;
+}
+
+/* Menus */
+header .menu-icons {
+    display: flex;
+    align-items: center;
+}
+
+header .menu-icons .cart a img {
+    width: 24px;
+    height: 24px;
+}
+
+header .menu-icons .hamburguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+header .menu-icons .hamburguer div {
+    width: 24px;
+    height: 3px;
+    background-color: #000;
+    transition: 0.4s;
+}
+
+header .menu-sanduiche a img {
+    width: 24px;
+    height: 24px;
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.menu-icons .cart img,
+.menu-icons .menu-sanduiche img {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Menu Sanduiche Interativo */
+.change div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: red;
+}
+
+/* Seções */
+section {
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Faixa de Descrição */
+#faixa-descricao {
+    background-color: #05053e;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 10px 10px 10px #949090;
+    overflow: hidden;
+    position: relative;
+}
+
+#faixa-descricao .descricao-conteudo {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+#faixa-descricao .descricao-conteudo p {
+    margin: 0;
+    font-size: 16px;
+    color: #f99e01;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Slideshow CSS */
+/* Definições gerais */
+.content {
+    height: 620px;
+    width: 1200px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    box-shadow: 10px 10px 5px 0px rgba(6, 6, 6, 0.49);
+}
+
+.content .slide img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Navegação */
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.bar:hover {
+    background-color: #fff;
+}
+
+input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.6s;
+}
+
+/* Controle de slides */
+#slide1:checked ~ .s1 {
+    margin-left: 0%;
+}
+
+#slide2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+#slide5:checked ~ .s1 {
+    margin-left: -80%;
+}
+
+
+/* Foto de Capa */
+#capa img {
+    width: 100%;
+    height: auto;
+}
+
+/* Home section */
+#sobre h1, h2 {
+    color: #05053e;
+}
+#sobre h3 {
+    color: #f99e01;
+}
+
+#servicos h2 {
+    color: #05053e;
+}
+
+#servicos h3 {
+    color: #f99e01;
+}
+
+#Projetos h2 {
+    color: #05053e;
+}
+
+#catalogo h2 {
+    color: #05053e;
+}
+
+#catalogo h3 {
+    color: #f99e01;
+}
+/* Estilos para a seção Planejamento e Estrutura */
+#planejamento-estrutura {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#planejamento-estrutura .planejamento-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#planejamento-estrutura h2 {
+    font-size: 32px;
+    color: #05053e;
+    margin-bottom: 20px;
+}
+
+#planejamento-estrutura h3 {
+    font-size: 24px;
+    color: #f99e01;
+    margin-top: 30px;
+}
+
+#planejamento-estrutura p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilos para a seção de Contato */
+#contato {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#contato .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contato h2 {
+    font-size: 32px;
+    color: #05053e;
+    margin-bottom: 30px;
+}
+
+.contato-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contato-content form,
+.contato-content .informacoes-contato {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.contato-content form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #05053e;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f99e01;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    .top-strip {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-strip .hamburguer {
+        display: block;
+        cursor: pointer;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .main-nav.active ul {
+        display: flex;
+    }
+
+    .contato-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contato-content from, 
+    .contato-content .informacoes-contato {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Acessibilidade */
+a {
+    outline: none;
+}
+
+a:focus {
+    outline: 2px dashed #f99e01;
+}
+
+.informacoes-contato {
+    text-align: left;
+}
+
+.informacoes-contato p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#map {
+    background-color: #ddd;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+
+.enviar_formulario {
+    border-radius: 10px;
+}
+
+/* WhatsApp Chat */
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.whatsapp-chat img {
+    width: 90px;
+    height: auto
+}
+
+/* Rodapé */
+footer {
+    background-color: #060940 ;
+    padding: 05px 0;
+    color: #f99e01;
+    text-align: center;
+    box-shadow: 3px, 3px, 1px black;
+}
+ /*Gradient in Hex 
+linear-gradient(to right, #010107 0%, 12.46684342622757%, #FDCE28 24.93368685245514%, 29.575596749782562%, #05053D 34.217506647109985%, 67.10875332355499%, #B9B9C1 100%);
+
+ 
+linear-gradient(to right, rgba(1, 1, 7, 1) 0%, 12.46684342622757%, rgba(253, 206, 40, 1) 24.93368685245514%, 29.575596749782562%, rgba(5, 5, 61, 1) 34.217506647109985%, 67.10875332355499%, rgba(185, 185, 193, 1) 100%);*/

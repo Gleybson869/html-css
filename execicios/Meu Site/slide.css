@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+} 
+
+.slides input {
+    display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+}
+
+.slide img{
+  width:800px;
+}
+
+.manual-navigation{
+  position: absolute;
+  width: 800px;
+  margin-top: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid rgba(31, 0, 209, 0.515);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 30px;
+}
+
+.manual-btn:hover {
+  background-color: #FDCE28;
+}
+
+/* Estilos para mover os slides com base nos botões de rádio */
+#radio1:checked ~ .first {
+  transform: translateX(0%);
+}
+
+#radio2:checked ~ .first {
+  transform: translateX(-25%);
+}
+
+#radio3:checked ~ .first {
+  transform: translateX(-50%);
+}
+
+#radio4:checked ~ .first {
+  transform: translateX(-75%);
+}
+
+

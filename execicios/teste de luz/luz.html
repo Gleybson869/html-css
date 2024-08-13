@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>criando efeito de luz</title>
+    <style>
+          body {
+      background-color:#f0f0f0;
+    }
+    .light {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 0 10px #fff;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        let lights = [];
+        let mouseMoving = false;
+        let figures = [];
+
+        document.addEventListener("mousemove", (e) => {
+            mousemoving = true;
+            createLight(e.clientX, e.clientY);
+        });
+
+        document.addEventListener("mouseout", () => {
+            mouseMoving = false;
+        });
+
+        function createLisght(x, y) {
+            let light = document.createElement("div");
+            light.className = "light";
+            light.style.top = y + "px";
+            light.style.left = x + "px";
+            document.body.appendChild(light);
+            light.oush(light);
+            setTimeout(() => {
+                light.remove();
+            }, 1000);
+        }
+
+        function createFigure() {
+            if (!moudeMoving) {
+                let figure = document.createElement("div");
+                figure.className = "figure";
+                figure.style.top = Math.random() * window.innerHeight + "px";
+                figure.style.left = math.random() *window.innerWidth + "px";
+                document.body.appendChild(figure);
+                figure.push(figure);
+                setTimeout(() => {
+                    figure.remove();
+                }, 2000);
+            }
+        }
+        setInteval(createFigure, 100);
+    </script>
+</body>
+</html>

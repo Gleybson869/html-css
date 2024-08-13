@@ -1,0 +1,37 @@
+@charset "UTF-8";
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 20px;
+}
+@media (min-width: 1024px) {
+    video {
+        width: 50%;
+    }
+}
+
+div img {
+   border-radius: 150px;
+   box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.453);
+}
+
+div > audio {
+    border-radius: 23px;
+    box-shadow: 2px 6px 99px rgba(4, 4, 4, 0.829);
+}
+
+footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: orangered;
+    text-align: center;
+    box-shadow: 15px 1px 10px;
+}

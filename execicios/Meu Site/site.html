@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagem/logo.png" type="image/x-icon">
+    <title>Perfil Empreendimentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+    <!-- Faixa Superior -->
+    <div class="top-strip">
+        <div class="left-side">
+            <a href="#"><img src="imagem/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="imagem/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="imagem/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="imagem/telegram.png" alt="Telegram"></a>
+            <div class="hamburguer" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="center">
+           <span id="data-time"></span>
+        </div>
+        <div class="right-side">
+            <a href="tel:+5514996962892"><img src="imagem/ligacao.ico" alt=""></a>
+            <a href="milto:contato@perfilconstrutora.com"><img src="imagem/arroba.ico" alt="Arroba"> contato@perfilconstrutora.com</a>
+        </div>
+    </div>
+    
+    <!-- Cabeçalho -->
+    <header>
+        <div class="bottom-bar">
+            <div class="logo">
+                <img src="imagem/logo.png" alt="Logo da Perfil">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#pages">Páginas</a></li>
+                    <li><a href="#elements">Elementos</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icons">
+                <div class="cart">
+                    <a href="#cart"><img src="imagem/cart.ico" alt="Carrinho de Compras"></a>
+                </div>
+                <div class="menu-icon" onclick="toggleMenu(this)">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="menu-sanduiche">
+                    <!-- Icone do menu sanduiche -->
+                    <a href="#sanduiche"><img src="imagem/sanduich.png" alt="Menu-Sanduiche"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Faixa de Descrição -->
+    <section id="faixa-descricao">
+        <div class="descricao-conteudo">
+            <p>Bem-Vindo à Perfil Construtora - construindo sonhos com qualaidade e confiança.</p>
+        </div>
+    </section>
+
+    <!-- Slideshow Section (Adicionada) -->
+    <div class="content">
+        <div class="slides">
+            <input class="input" type="radio" name="slide" id="slide1" checked>
+            <input class="input" type="radio" name="slide" id="slide2">
+            <input class="input" type="radio" name="slide" id="slide3">
+            <input class="input" type="radio" name="slide" id="slide4">
+            <input class="input" type="radio" name="slide" id="slide5">
+
+            <div class="slide s1">
+                <img src="imagem/banner1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagem/banner2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagem/banner3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagem/banner4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagem/banner5.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <label class="bar" for="slide1"></label>
+        <label class="bar" for="slide2"></label>
+        <label class="bar" for="slide3"></label>
+        <label class="bar" for="slide4"></label>
+        <label class="bar" for="slide5"></label>
+    </div>
+
+    <!--Foto de Capa-->
+    <section id="capa">
+        <img src="imagem/Capa.jpg" alt="Foto de Capa">
+    </section>
+
+    <!--Home Section-->
+    <section id="sobre">
+        <div class="container">
+            <h1>Bem-vindo à Perfil Construtora</h1>
+            <p>Especialistas em construções de casa e fabricção de tijolos</p>
+            <a href="#contato" class="cta-button">Solicite um Orçamento</a>
+        </div>
+    </section>
+    
+    <!--Sobre Nós Section-->
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre a Perfil Construtora</h2>
+            <p>Breve história da empresa, como foi fundada e seu crecimento.</p>
+            <h3>Missão</h3>
+            <p>Ser líder no mercado de construção civil.</p>
+            <h3>Equipe</h3>
+            <p>Apresentação da equipe com foto e descrição curtas.</p>
+        </div>
+    </section>
+
+    <!--Serviços Section-->
+    <section id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servico">
+                 <h3>Construção de Casas</h3>
+                <p>Descriçao dos tipos de projetos (residenciais, comerciais) e detalhes sobre a qualidade e durabilidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos">
+        <div class="container">
+            <h2>Nossos Projetos</h2>
+            <div class="galeria">
+                <div class="projeto">
+                    <img src="imagem/Arquitetura inovadora.jpeg" alt="Arquitetura Inovadora">
+                    <p>Descrição de Projeto 2</p>
+                </div>
+                <!--Adicione mais projetos conforme necessário-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo Section -->
+    <section id="catalogo">
+        <div class="container">
+            <h2>Nosso Catálogo</h2>
+            <div class="catalogo-item">
+                <img src="imagem/Servicios inmobiliarios.jpeg" alt="Serviços Inmobiliario">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 2</p>
+            </div>
+        </div>
+    </section>
+
+    <!--blog Section-->
+    <section id="blog">
+        <div class="container">
+            <h2>Blog da Perfil Construtora</h2>
+            <article>
+                <h3>Artigo 1</h3>
+                <p>Conteúdo do artigo 1 sobre construção civil.</p>
+            </article>
+            <!-- Adicione mais artigos conforme necessário -->
+        </div>
+    </section>
+
+     <!-- Planejamento e Estrutura Sectiion -->
+     <section id="planejamento-estrutura">
+        <div class="container">
+            <h2>Planejamento e Estrutura</h2>
+            <div class="planejamento-info">
+                <h3>Objetivo do site</h3>
+                <p>Informar sobre os serviços da construtora, mostra projetos realizados, captar leads e facilitar a comunicação.</p>
+
+                <h3>Pesquisa de Mercado</h3>
+                <p>Analisar sites de outros construtoras e identificar boas práticas.</p>
+
+                <h3>Público-Alvo</h3>
+                <p>Potenciais clientes (residencial e comercial), investidores, fornecedores e parceiros.</p>
+
+                <h3>Conteúdo</h3>
+                <p>planejar o tipo de conteúdo que será publico, como descrição de serviço, portifólio de projetos, blog de dicas e notícias do setor.</p>
+            </div>
+        </div>
+     </section>
+
+
+    <!--Contato Section-->
+    <section id="contato">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <div class="informacoes-contato">
+                <p>Endereço: Rua Exemplo, 123</p>
+                <p>Telefone:(14) 9 9696-2892</p>
+                <p>Email: contato@perfilconstrutora.com</p>
+            </div>
+            <form action="enviar_formulario.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            
+             <!-- Mapa do Google Maps -->
+                <div id="map" style="height: 300px; width: 100%;">[Mapa integrado]</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Perfil Construtora. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão de bate-papo no WhatsApp -->
+    <div class="whatsapp-chat" onclick="openWhatsApp()">
+        <img src="imagem/whatsapp.ico" alt="Ícone do WhatsApp">
+    </div>
+
+    <script src="script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API_AQUI&callback=initMap">
+</script>
+</body>
+</html>
+

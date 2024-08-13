@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;/*permite que os elementos se ajustem em linhas diferentes*/
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.29);/*adicionar sobra a imagem*/
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.text-container {
+    padding-left: 20px; /*Adicionando espaço entre a imagem e o texto*/
+    border-left: 1px solid #000; /*adiciona uma borda vertical á esquerda*/
+    flex: 2; /* Permitir que o texto ocupe mais espaço*/
+    margin: 10px;
+}
+
+.vertical-line{
+    width: 2px;
+    height: 100%; /*ajuste conforme necessario*/
+    background-color: black;
+    margin: 0 10px; /*ajustando o espaçamento entre a linha e os elementos */
+}
+
+.reflection {
+    filter: brightness(1.5) contrast(1.2);
+    transform: scale(1.05);
+}
+.image-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px; /*Definir a perspectiva para a profundidade de efeito 3d*/
+}

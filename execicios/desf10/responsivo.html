@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        main{
+            background-color: bisque;
+            padding: 20px;
+            border-radius: 10px;
+
+            /*forma simplificada de fazer a resposividade*/
+            min: width 320px;
+            max-width: 800px;
+            margin: auto;
+        }
+        main > h1 {
+            text-align: center;
+            padding: 5px;
+            background-color: cornflowerblue;
+            color:ivory;
+            border-radius: 10px;
+            text-shadow: 2px 2px 4px rgb(0, 0, 0);
+            box-shadow: 6px 4px 8px #00000051;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Resposvidade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet consequuntur sint quaerat illo nesciunt, nam quos nulla nemo animi ab, quia odit in voluptatibus beatae. Repellat aperiam sint tempora rem?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius aut ea consequuntur dolorem ullam, amet totam. Officia libero iste quis vel facere, culpa quasi amet, ex, temporibus veniam mollitia reiciendis!</p>
+
+        <!--usando picture e source media para  criar responsividade na imagem-->
+        <picture>
+            <source media="(max-width: 800px )" srcset="">
+            <img src="image/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ad quos nesciunt totam nihil corrupti officia autem itaque numquam reprehenderit, illum tenetur, voluptatibus soluta sequi est esse asperiores! Ullam, iste?</p>
+    </main>
+    
+</body>
+</html>
